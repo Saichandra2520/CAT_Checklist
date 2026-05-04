@@ -20,7 +20,7 @@ export const TopicOfTheDay = ({ topic }: { topic: Topic | null }) => {
       </div>
       <h3 className="mt-3 font-[var(--font-heading)] text-2xl font-bold tracking-tight">{topic.topic}</h3>
       <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-        Use today’s momentum on one focused topic instead of spreading your attention thin.
+        Use today's momentum on one focused topic instead of spreading your attention thin.
       </p>
       <div className="mt-4 flex flex-wrap gap-2">
         <Badge>{topic.status.replaceAll("_", " ")}</Badge>
