@@ -1,0 +1,1 @@
+export const StreakCalendar = ({ streak }: { streak: number }) => <div className="rounded-xl border p-4">?? {streak} day streak</div>;
