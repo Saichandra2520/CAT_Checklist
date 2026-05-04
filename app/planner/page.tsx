@@ -4,8 +4,6 @@ import { useMemo, useState } from "react";
 import { useDB } from "@/hooks/useDB";
 import { usePlanner } from "@/hooks/usePlanner";
 
-export const dynamic = "force-dynamic";
-
 export default function PlannerPage() {
   const db = useDB();
   const [excludeWeekends, setExcludeWeekends] = useState(true);
