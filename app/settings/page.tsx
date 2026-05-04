@@ -4,6 +4,8 @@ import { useState } from "react";
 import { resetDB } from "@/lib/db";
 import { useDB } from "@/hooks/useDB";
 
+export const dynamic = "force-dynamic";
+
 export default function SettingsPage() {
   const db = useDB();
   const [confirm, setConfirm] = useState("");
