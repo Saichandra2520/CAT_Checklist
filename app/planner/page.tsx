@@ -10,11 +10,12 @@ export default function PlannerPage() {
   const db = useDB();
   const [excludeWeekends, setExcludeWeekends] = useState(true);
   const [restDays, setRestDays] = useState<string[]>([]);
+
+  if (!db.ready) return <div>Loading...</div>;
+
   const examDate = new Date(db.getSetting("exam_date") ?? "2026-11-29");
   const planner = usePlanner(db.topics, examDate, excludeWeekends);
   const plan = useMemo(() => planner.plan.filter((d) => !restDays.includes(d.date)), [planner.plan, restDays]);
-
-  if (!db.ready) return <div>Loading...</div>;
 
   return <div className="space-y-4">
     <h1 className="text-2xl font-bold">Study Planner</h1>
